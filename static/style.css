@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+  overflow: hidden scroll;
+}
+
+body {
+  min-height: 100%;
+  font-family: Georgia;
+  background-color: #eee;
+}
+
+header {
+
+}
+
+header h1 {
+  width: 40%;
+  margin: 10px auto;
+  text-align: center;
+  letter-spacing: 8px;
+}
