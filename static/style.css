@@ -1,14 +1,9 @@
-html {
-  height: 100vh;
-  overflow: hidden scroll;
-  font-size: 16px;
-}
-
 body {
-  margin: 0;
   background-color: #ddd;
   color: #444;
   font-family: Courier;
+  font-size: 18px;
+  line-height: 36px;
 }
 
 header {
@@ -17,5 +12,24 @@ header {
 }
 
 header h1 {
-  letter-spacing: 1.25rem;
+  margin-right: -18px;
+  font-size: 36px;
+  letter-spacing: 18px;
+}
+
+article {
+  width: 800px;
+  margin: 0 auto;
+  text-align: justify;
+}
+
+.grid {
+  width: 1000px;
+  margin: 36px auto;
+  display: grid;
+  grid-template-columns: 500px 500px;
+}
+
+.grid h3 {
+  border: black solid 1px;
 }
