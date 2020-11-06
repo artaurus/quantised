@@ -6,8 +6,8 @@ html {
 
 body {
   margin: 0;
-  background-color: #eee;
-  color: #333;
+  background-color: #ddd;
+  color: #444;
   font-family: Courier;
 }
 
@@ -17,5 +17,5 @@ header {
 }
 
 header h1 {
-  letter-spacing: 20px;
+  letter-spacing: 1.25rem;
 }
