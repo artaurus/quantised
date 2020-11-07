@@ -1,35 +1,56 @@
 body {
   background-color: #ddd;
-  color: #444;
   font-family: Courier;
-  font-size: 18px;
-  line-height: 36px;
+  line-height: 2rem;
 }
 
 header {
   display: flex;
   justify-content: center;
+  background-color: teal;
 }
 
 header h1 {
-  margin-right: -18px;
-  font-size: 36px;
-  letter-spacing: 18px;
+  margin-right: -0.5rem;
+  color: #444;
+  font-size: 2rem;
+  letter-spacing: 0.5rem;
+}
+
+h1 a:hover, h1 a:active {
+  color: #222;
+  transition: 0.5s;
 }
 
 article {
-  width: 800px;
-  margin: 0 auto;
+  width: 90vw;
+  margin: 1rem auto;
   text-align: justify;
 }
 
 .grid {
-  width: 1000px;
-  margin: 36px auto;
+  width: 90vw;
+  margin: 1rem auto;
   display: grid;
-  grid-template-columns: 500px 500px;
+  grid-gap: 0.5rem;
 }
 
-.grid h3 {
+.grid span {
   border: black solid 1px;
+}
+
+@media screen and (min-width: 800px) {
+  body {
+    font-size: 18px;
+  }
+
+  header h1 {
+    letter-spacing: 1rem;
+    margin-right: -1rem;
+  }
+
+  article {
+    width: 800px;
+    padding: 0;
+  }
 }
