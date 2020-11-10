@@ -1,14 +1,16 @@
 {% extends "layout.html" %}
 {% block content %}
-<article>
-  The foundation of modern physics is quantum mechanics, a theory that illuminates the behaviour of the microscopic world. Unfortunately, its success arises at the cost of human intuition. In the following series of articles, I have attempted to illustrate the principles of quantum theory, in a concise and non-mathematical form.
-</article>
-<section class='grid'>
-  <span>|1> An Introduction</span>
-  <span>The History <2|</span>
-  <span>|3> Classical Correlations</span>
-  <span>The Mathematical Formalism <4|</span>
-  <span>|5> The Atom</span>
-  <span>Symmetries <6|</span>
+<section>
+  <nav class='col'>
+    <ul>
+      <li>Introduction</li>
+      <li>History</li>
+      <li>Formalism</li>
+      <li>Symmetries</li>
+    </ul>
+  </nav>
+  <article class='col'>
+    The foundation of modern physics is quantum mechanics, a theory that illuminates the behaviour of the microscopic world. Unfortunately, its success arises at the cost of human intuition. In the following series of articles, I have attempted to illustrate the principles of quantum theory, in a concise and non-mathematical form.
+  </article>
 </section>
 {% endblock content %}
