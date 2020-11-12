@@ -15,7 +15,7 @@ function article(title, data) {
   data.forEach(elm => {
     if (elm.title == title) {
       para.innerHTML = elm.content;
-    };
+    }
   });
 }
 
@@ -38,3 +38,5 @@ fetch('chapters.json')
   .then(res => res.json())
   .then(data => handler(data))
   .catch(err => console.log(err));
+
+document.querySelector('h1').addEventListener('click', () => location.reload(false));
