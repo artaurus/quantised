@@ -1,8 +1,8 @@
 function nav(data) {
   const ul = document.createElement('ul');
-  data.forEach(item => {
+  data.forEach(elm => {
     const li = document.createElement('li');
-    const text = document.createTextNode(item.title);
+    const text = document.createTextNode(elm.title);
     li.appendChild(text);
     ul.appendChild(li);
   });
@@ -10,24 +10,31 @@ function nav(data) {
   nav.appendChild(ul);
 }
 
-function content(title, data) {
-  para = document.querySelector('p');
-  data.forEach(item => {
-    if (item.title == title) {
-      para.innerHTML = item.content;
+function article(title, data) {
+  const para = document.querySelector('p');
+  data.forEach(elm => {
+    if (elm.title == title) {
+      para.innerHTML = elm.content;
     };
   });
 }
 
 function handler(data) {
   nav(data);
+  let flag = 0;
   li = document.querySelectorAll('nav ul li');
-  li.forEach(item => {
-    item.addEventListener('click', () => content(item.innerHTML, data));
+  let old = li[0];
+  li.forEach(elm => {
+    elm.addEventListener('click', () => {
+      article(elm.innerHTML, data);
+      old.className = '';
+      elm.className = 'active';
+      old = elm;
+    });
   });
 }
 
 fetch('chapters.json')
-.then(res => res.json())
-.then(data => handler(data))
-.catch(err => console.log(err));
+  .then(res => res.json())
+  .then(data => handler(data))
+  .catch(err => console.log(err));
