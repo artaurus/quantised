@@ -1,7 +1,7 @@
 body {
+  background-color: #ddd;
   font-family: Montserrat, Courier;
   line-height: 2rem;
-  background-color: #ddd;
 }
 
 header {
@@ -15,21 +15,18 @@ header {
   background-color: #008080;
 }
 
-header h1 {
-  height: 6vh;
+h1 {
+  margin-right: -1rem;
+  padding: 1rem;
   color: #444;
   font-family: 'Playfair Display', Courier;
   font-size: 2rem;
   letter-spacing: 1rem;
-  margin-right: -1rem;
 }
 
-h1 a {
-  padding: 1rem;
-}
-
-h1 a:hover, h1 a:active {
+h1:hover, h1:active {
   color: #000;
+  cursor: pointer;
   transition: 400ms;
 }
 
@@ -57,10 +54,20 @@ nav ul li {
 }
 
 nav ul li:hover {
-  cursor: pointer;
   color: #87ceeb;
   background-color: #000;
+  cursor: pointer;
   transition: 400ms;
+}
+
+.active {
+  color: #fa8072;
+  background-color: #000;
+}
+
+.active:hover {
+  color: #fa8072;
+  cursor: default;
 }
 
 article {
