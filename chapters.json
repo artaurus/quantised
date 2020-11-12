@@ -1,18 +1,16 @@
-{
-  "1": {
-    "title": "Introduction",
-    "content": "The foundation of modern physics is quantum mechanics, a theory that illuminates the behaviour of the microscopic world. Unfortunately, its success arises at the cost of human intuition. In the following series of articles, I have attempted to illustrate the principles of quantum theory, in a concise and non-mathematical form."
-  },
-  "2": {
-    "title": "History",
-    "content": ""
-  }
-  "3": {
-    "title": "Formalism",
-    "content": ""
-  }
-  "4": {
-    "title": "Symmetries",
-    "content": ""
-  }
-}
+[{
+  "title": "Introduction",
+  "content": "Introduction content"
+}, {
+  "title": "History",
+  "content": "History content"
+}, {
+  "title": "Formalism",
+  "content": "Formalism content"
+}, {
+  "title": "Symmetries",
+  "content": "Symmetries content"
+}, {
+  "title": "The atom",
+  "content": "The atom content"
+}]
