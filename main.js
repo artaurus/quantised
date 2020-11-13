@@ -10,33 +10,56 @@ function nav(data) {
   nav.appendChild(ul);
 }
 
-function article(title, data) {
+function stateChange(li, data, update) {
+  if (update) {
+    history.pushState({}, '', '/' + li.innerHTML);
+    const title = document.title.split(' - ');
+    document.title = title[0] + ' - ' + li.innerHTML;
+  }
+
   const para = document.querySelector('p');
   data.forEach(elm => {
-    if (elm.title == title) {
+    if (elm.title == li.innerHTML) {
       para.innerHTML = elm.content;
     }
   });
+
+  let old = document.querySelector('.active');
+  if (old != null) {
+    old.className = '';
+  }
+  li.className = 'active';
+  old = li;
+}
+
+function homePage() {
+    const url = location.href.split('/');
+    url.pop();
+    location.href = url.join('/') + '/';
 }
 
 function handler(data) {
   nav(data);
-  let flag = 0;
+
   li = document.querySelectorAll('nav ul li');
-  let old = li[0];
   li.forEach(elm => {
-    elm.addEventListener('click', () => {
-      article(elm.innerHTML, data);
-      old.className = '';
-      elm.className = 'active';
-      old = elm;
-    });
+    elm.id = elm.innerHTML;
+    elm.addEventListener('click', () => stateChange(elm, data, true));
   });
+  document.querySelector('h1').addEventListener('click', () => homePage());
+
+  window.onpopstate = function() {
+    path = location.pathname.slice(1).replace('%20', ' ');
+    if (path != '') {
+      elm = document.getElementById(path);
+      stateChange(elm, data, false);
+    } else {
+      homePage();
+    }
+  };
 }
 
 fetch('chapters.json')
   .then(res => res.json())
   .then(data => handler(data))
   .catch(err => console.log(err));
-
-document.querySelector('h1').addEventListener('click', () => location.reload(false));
