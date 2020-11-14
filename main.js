@@ -1,4 +1,4 @@
-function nav(data) {
+function navBar(data) {
   const ul = document.createElement('ul');
   data.forEach(elm => {
     const li = document.createElement('li');
@@ -10,16 +10,25 @@ function nav(data) {
   nav.appendChild(ul);
 }
 
-function stateChange(li, data, update) {
+function homePage() {
+  const url = location.href.split('/');
+  url.pop();
+  location.href = url.join('/') + '/';
+}
+
+function renderState(li, data, update) {
   if (update) {
     history.pushState({}, '', '/' + li.innerHTML);
     const title = document.title.split(' - ');
     document.title = title[0] + ' - ' + li.innerHTML;
   }
 
+  const h3 = document.querySelector('h3');
   const para = document.querySelector('p');
   data.forEach(elm => {
-    if (elm.title == li.innerHTML) {
+    if (elm.title == li.id) {
+      h3.style.display = 'block';
+      h3.innerHTML = elm.title;
       para.innerHTML = elm.content;
     }
   });
@@ -30,33 +39,40 @@ function stateChange(li, data, update) {
   }
   li.className = 'active';
   old = li;
-}
 
-function homePage() {
-    const url = location.href.split('/');
-    url.pop();
-    location.href = url.join('/') + '/';
+  window.scrollTo(0, 0);
 }
 
 function handler(data) {
-  nav(data);
+  navBar(data);
 
+  document.querySelector('h1').addEventListener('click', () => homePage());
   li = document.querySelectorAll('nav ul li');
   li.forEach(elm => {
     elm.id = elm.innerHTML;
-    elm.addEventListener('click', () => stateChange(elm, data, true));
+    elm.addEventListener('click', () => renderState(elm, data, true));
   });
-  document.querySelector('h1').addEventListener('click', () => homePage());
 
-  window.onpopstate = function() {
+  window.addEventListener('popstate', () => {
     path = location.pathname.slice(1).replace('%20', ' ');
     if (path != '') {
       elm = document.getElementById(path);
-      stateChange(elm, data, false);
+      renderState(elm, data, false);
     } else {
       homePage();
     }
-  };
+  });
+}
+
+if (window.innerWidth < 480) {
+  main = document.querySelector('main');
+  nav = document.querySelector('nav');
+  main.removeChild(nav);
+  main.appendChild(nav);
+}
+
+if (location.pathname == '/') {
+  document.querySelector('h3').style.display = 'none';
 }
 
 fetch('chapters.json')
