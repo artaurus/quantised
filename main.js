@@ -1,7 +1,5 @@
 function homePage() {
-  const url = location.href.split('/');
-  url.pop();
-  location.href = url.join('/');
+  location.href = 'https://artaurus.github.io/quantised/';
   const active = document.querySelector('.active');
   if (active != null) {
     active.className = '';
@@ -22,7 +20,7 @@ function navBar(data) {
 
 function renderState(li, data, update) {
   if (update) {
-    history.pushState({}, '', '/' + li.innerHTML);
+    history.pushState({}, '', '/quantised/' + li.innerHTML);
     const title = document.title.split(' - ');
     document.title = title[0] + ' - ' + li.innerHTML;
   }
@@ -58,10 +56,10 @@ function handler(data) {
   });
 
   window.addEventListener('popstate', () => {
-    const extPath = location.pathname.split('/');
-    const path = extPath.pop().replace('%20', ' ');
-    if (path != 'quantised') {
-      elm = document.getElementById(path);
+    const path = location.pathname.split('/');
+    const route = path.pop().replace('%20', ' ');
+    if (route != '') {
+      elm = document.getElementById(route);
       renderState(elm, data, false);
     } else {
       homePage();
@@ -76,7 +74,7 @@ if (window.innerWidth < 480) {
   main.appendChild(nav);
 }
 
-if (location.pathname == '/quantised') {
+if (location.pathname == '/quantised/') {
   document.querySelector('h3').style.display = 'none';
 }
 
