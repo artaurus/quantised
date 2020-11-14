@@ -1,3 +1,13 @@
+function homePage() {
+  const url = location.href.split('/');
+  url.pop();
+  location.href = url.join('/');
+  const active = document.querySelector('.active');
+  if (active != null) {
+    active.className = '';
+  }
+}
+
 function navBar(data) {
   const ul = document.createElement('ul');
   data.forEach(elm => {
@@ -8,12 +18,6 @@ function navBar(data) {
   });
   const nav = document.querySelector('nav');
   nav.appendChild(ul);
-}
-
-function homePage() {
-  const url = location.href.split('/');
-  url.pop();
-  location.href = url.join('/') + '/';
 }
 
 function renderState(li, data, update) {
@@ -54,8 +58,9 @@ function handler(data) {
   });
 
   window.addEventListener('popstate', () => {
-    path = location.pathname.slice(1).replace('%20', ' ');
-    if (path != '') {
+    const extPath = location.pathname.split('/');
+    const path = extPath.pop().replace('%20', ' ');
+    if (path != 'quantised') {
       elm = document.getElementById(path);
       renderState(elm, data, false);
     } else {
@@ -71,7 +76,7 @@ if (window.innerWidth < 480) {
   main.appendChild(nav);
 }
 
-if (location.pathname == '/') {
+if (location.pathname == '/quantised') {
   document.querySelector('h3').style.display = 'none';
 }
 
