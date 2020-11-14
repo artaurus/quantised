@@ -67,12 +67,18 @@ function handler(data) {
   });
 }
 
-if (window.innerWidth < 480) {
-  main = document.querySelector('main');
-  nav = document.querySelector('nav');
-  main.removeChild(nav);
-  main.appendChild(nav);
+function sequence() {
+  const main = document.querySelector('main');
+  const first = document.querySelector('main:first-child');
+  main.removeChild(first);
+  main.appendChild(first);
 }
+
+if (window.innerWidth < 480) {
+  sequence();
+}
+
+window.addEventListener('orientationchange', () => sequence());
 
 if (location.pathname == '/quantised/') {
   document.querySelector('h3').style.display = 'none';
