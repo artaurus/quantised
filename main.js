@@ -1,35 +1,19 @@
+function flipSequence() {
+  const main = document.querySelector('main');
+  const first = main.firstElementChild;
+  main.removeChild(first);
+  main.appendChild(first);
+}
+
 function homePage() {
   location.href = 'https://artaurus.github.io/quantised/';
-  const active = document.querySelector('.active');
-  if (active != null) {
-    active.className = '';
-  }
 }
 
-function navBar(data) {
-  const ul = document.createElement('ul');
-  data.forEach(elm => {
-    const li = document.createElement('li');
-    const text = document.createTextNode(elm.title);
-    li.appendChild(text);
-    ul.appendChild(li);
-  });
-  const nav = document.querySelector('nav');
-  nav.appendChild(ul);
-}
-
-function renderState(li, data, update) {
-  if (update) {
-    history.pushState({}, '', '/quantised/' + li.innerHTML);
-    const title = document.title.split(' - ');
-    document.title = title[0] + ' - ' + li.innerHTML;
-  }
-
+function renderState(state, data) {
   const h3 = document.querySelector('h3');
   const para = document.querySelector('p');
   data.forEach(elm => {
-    if (elm.title == li.id) {
-      h3.style.display = 'block';
+    if (elm.title == state.id) {
       h3.innerHTML = elm.title;
       para.innerHTML = elm.content;
     }
@@ -39,44 +23,32 @@ function renderState(li, data, update) {
   if (old != null) {
     old.className = '';
   }
-  li.className = 'active';
-  old = li;
-
+  state.className = 'active';
+  old = state;
   window.scrollTo(0, 0);
 }
 
 function handler(data) {
-  navBar(data);
+  const ul = document.querySelector('ul');
+  data.forEach(elm => {
+    const li = document.createElement('li');
+    const text = document.createTextNode(elm.title);
+    li.appendChild(text);
+    ul.appendChild(li);
+  });
 
   document.querySelector('h1').addEventListener('click', () => homePage());
   li = document.querySelectorAll('nav ul li');
-  li.forEach(elm => {
-    elm.id = elm.innerHTML;
-    elm.addEventListener('click', () => renderState(elm, data, true));
-  });
-
-  window.addEventListener('popstate', () => {
-    const path = location.pathname.split('/');
-    const route = path.pop().replace('%20', ' ');
-    if (route != '') {
-      elm = document.getElementById(route);
-      renderState(elm, data, false);
-    } else {
-      homePage();
-    }
+  li.forEach(state => {
+    state.id = state.innerHTML;
+    state.addEventListener('click', () => renderState(state, data));
   });
 }
 
 if (window.innerWidth < 480) {
-  main = document.querySelector('main');
-  nav = document.querySelector('nav');
-  main.removeChild(nav);
-  main.appendChild(nav);
+  flipSequence();
 }
-
-if (location.pathname == '/quantised/') {
-  document.querySelector('h3').style.display = 'none';
-}
+window.addEventListener('orientationchange', () => flipSequence());
 
 fetch('chapters.json')
   .then(res => res.json())
