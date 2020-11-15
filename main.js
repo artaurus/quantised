@@ -45,6 +45,13 @@ function handler(data) {
   });
 }
 
+function sequence() {
+  const main = document.querySelector('main');
+  const first = document.querySelector('main:first-child');
+  main.removeChild(first);
+  main.appendChild(first);
+}
+
 if (window.innerWidth < 480) {
   flipSequence();
 }
