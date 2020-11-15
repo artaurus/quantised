@@ -5,10 +5,6 @@ function flipSequence() {
   main.appendChild(first);
 }
 
-function homePage() {
-  location.href = 'https://artaurus.github.io/quantised/';
-}
-
 function renderState(state, data) {
   const h3 = document.querySelector('h3');
   const para = document.querySelector('p');
@@ -37,19 +33,12 @@ function handler(data) {
     ul.appendChild(li);
   });
 
-  document.querySelector('h1').addEventListener('click', () => homePage());
+  document.querySelector('h1').addEventListener('click', () => location.href = 'https://artaurus.github.io/quantised/');
   li = document.querySelectorAll('nav ul li');
   li.forEach(state => {
     state.id = state.innerHTML;
     state.addEventListener('click', () => renderState(state, data));
   });
-}
-
-function sequence() {
-  const main = document.querySelector('main');
-  const first = document.querySelector('main:first-child');
-  main.removeChild(first);
-  main.appendChild(first);
 }
 
 if (window.innerWidth < 480) {
