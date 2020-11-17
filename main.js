@@ -31,8 +31,6 @@ function loadRoute() {
   }
 }
 
-window.scrollTo(0, 0);
-
 if (window.innerWidth < 480) {
   const main = document.querySelector('main');
   const first = main.firstElementChild;
