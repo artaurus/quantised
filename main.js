@@ -28,7 +28,7 @@ function loadRoute() {
   if (location.hash != '') {
     const route = location.hash.slice(1).replace('%20', ' ');
     renderState(route);
-    history.pushState({}, '', 'quantised/' + route);
+    history.pushState({}, '', route);
   }
 }
 
@@ -53,7 +53,7 @@ routes.forEach(route => {
 
   li.addEventListener('click', () => {
     renderState(route);
-    history.pushState({}, '', 'quantised/' + route);
+    history.pushState({}, '', route);
   });
 });
 
