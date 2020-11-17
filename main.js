@@ -1,4 +1,4 @@
-const homePage = () => location.href = 'https://artaurus.github.io/quantised';
+const homePage = () => location.href = 'https://artaurus.github.io/quantised/';
 
 function renderState(route) {
   const state = document.getElementById(route);
@@ -67,4 +67,7 @@ window.addEventListener('popstate', () => {
   }
 });
 
-window.addEventListener('orientationchange', () => location.reload());
+window.addEventListener('orientationchange', () => {
+  location.reload();
+  window.scrollTo(0, 0);
+});
