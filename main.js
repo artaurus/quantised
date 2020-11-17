@@ -27,7 +27,6 @@ function renderState(route) {
 function loadRoute() {
   if (location.hash != '') {
     const route = location.hash.slice(1).replace('%20', ' ');
-    history.pushState({}, '', route);
     renderState(route);
   }
 }
