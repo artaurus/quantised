@@ -1,7 +1,8 @@
 body {
   color: #222;
   background-color: #ddd;
-  font-family: Montserrat, Courier;
+  font-family: Ubuntu, Courier;
+  font-size: 18px;
   line-height: 2rem;
 }
 
