@@ -38,7 +38,7 @@ if (window.innerWidth < 480) {
   main.appendChild(first);
 }
 
-const routes = ['Introduction', 'Formalism', 'Postulates', 'The atom', 'Symmetries', 'Entanglement'];
+const routes = ['Introduction', 'Formalism'];
 
 document.querySelector('h1').addEventListener('click', () => homePage());
 
