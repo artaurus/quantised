@@ -24,13 +24,6 @@ function renderState(route) {
   window.scrollTo(0, 0);
 }
 
-function loadRoute() {
-  if (location.hash != '') {
-    const route = location.hash.slice(1).replace('%20', ' ');
-    renderState(route);
-  }
-}
-
 if (window.innerWidth < 480) {
   const main = document.querySelector('main');
   const first = main.firstElementChild;
@@ -51,15 +44,18 @@ routes.forEach(route => {
   ul.appendChild(li);
 
   li.addEventListener('click', () => {
-    history.pushState({}, '', route);
+    history.pushState({}, '', '#' + route);
     renderState(route);
   });
 });
 
-loadRoute();
+if (location.hash != '') {
+  const route = location.hash.slice(1).replace('%20', ' ');
+  renderState(route);
+}
 
 window.addEventListener('popstate', () => {
-  const route = location.pathname.split('/')[2].replace('%20', ' ');
+  const route = location.hash.slice(1).replace('%20', ' ');
   if (route != '') {
     renderState(route);
   } else {
