@@ -31,7 +31,7 @@ if (window.innerWidth < 480) {
   main.appendChild(first);
 }
 
-const routes = ['Introduction', 'Formalism'];
+const routes = ['Introduction', 'Wave-Particle Duality', 'Transformation Theory', 'Uncertainty', 'Spin', 'Antiparticles', 'Entanglement', 'Interpretations'];
 
 document.querySelector('h1').addEventListener('click', () => homePage());
 
