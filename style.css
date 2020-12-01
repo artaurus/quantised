@@ -48,10 +48,6 @@ nav {
   background-color: #222;
 }
 
-nav ul {
-  list-style-type: none;
-}
-
 nav ul li {
   padding: 0.5rem 1rem;
   border-bottom: black solid 1px;
