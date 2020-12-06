@@ -1,15 +1,16 @@
 const homePage = () => location.href = 'https://artaurus.github.io/quantised/';
 
 function renderState(route) {
-  const state = document.querySelector('.' + route.replaceAll(' ', ''));
+  const anchor = Array.from(document.querySelectorAll('nav ul li a'));
+  const state = anchor.filter(a => a.innerHTML == route)[0];
   if (!state) {
     return homePage();
   }
 
-  document.querySelector('h3').innerHTML = route;
   fetch('chapters/' + route + '.txt')
-    .then(resp => resp.text())
+    .then(response => response.text())
     .then(content => {
+      document.querySelector('h3').innerHTML = route;
       document.querySelector('p').innerHTML = content;
     })
     .catch(error => console.log(error));
@@ -36,7 +37,6 @@ const routes = ['Introduction', 'Wave-Particle Duality', 'Transformation Theory'
 const ul = document.querySelector('ul');
 routes.forEach(route => {
   const li = document.createElement('li');
-  li.className = route.replaceAll(' ', '');
   const a = document.createElement('a');
   a.href = '#' + route.replaceAll(' ', '%20');
   const text = document.createTextNode(route);
@@ -53,9 +53,9 @@ if (location.hash) {
 window.addEventListener('popstate', () => {
   const route = location.hash.slice(1).replaceAll('%20', ' ');
   if (route) {
-    renderState(route);
+    return renderState(route);
   } else {
-    homePage();
+    return homePage();
   }
 });
 
