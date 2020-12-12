@@ -59,9 +59,4 @@ window.addEventListener('popstate', () => {
   }
 });
 
-window.addEventListener('beforeunload', () => {
-  window.scrollTo(0, 0);
-  return '';
-});
-
 window.addEventListener('orientationchange', () => location.reload());
