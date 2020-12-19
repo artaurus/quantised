@@ -1,25 +1,29 @@
-Light is a wave. This was the conclusive belief at the end of the 19th century, courtesy of James Maxwell's theoretical and Heinrich Hertz's experimental contributions to the field of electromagnetism. However, the interaction between light and matter had not yet been deciphered.<br>
-<br>
-Imagine a box enclosing a field of electromagnetic waves such as light. Such an imposition of boundaries allows only discrete wavelengths, and hence discrete frequencies, reducing the waves to what are called <i>normal modes</i>. The aim was to determine the variation in the field's energy density with respect to the wave frequencies. While the system I have described may not seem so, it is an idealisation of the spectrum of radiation (electromagnetic waves) emitted by a body that is in thermal equilibrium with its surroundings. Max Planck impressively guessed a formula which suited the experimentally measured data. But it had neither a mathematical derivation, nor a theoretical understanding.<br>
-<br>
+<h2>Introduction</h2>
+<p>Light is a wave. This was the conclusive belief at the end of the 19th century, courtesy of James Maxwell's theoretical and Heinrich Hertz's experimental contributions to the field of electromagnetism. However, the interaction between light and matter had not yet been deciphered.
+<br><br>
+Imagine a box enclosing a field of electromagnetic waves such as light. Such an imposition of boundaries allows only discrete wavelengths, and hence discrete frequencies, reducing the waves to what are called <i>normal modes</i>. The aim was to determine the variation in the field's energy density with respect to the wave frequencies. While the system I have described may not seem so, it is an idealisation of the spectrum of radiation (electromagnetic waves) emitted by a body that is in thermal equilibrium with its surroundings. Max Planck impressively guessed a formula which suited the experimentally measured data. But it had neither a mathematical derivation, nor a theoretical understanding.
+<br><br>
 Classical statistical physics obeys the equipartition theorem and, as the name suggests, distributes energy equally amongst the modes. While accurate at lower frequencies, this led to the <i>ultraviolet catastrophe</i>; the total energy emitted was infinite. In an act of desperation, Planck assumed that the energy <i>E</i> of a mode is proportional to the frequency <i>&nu;</i> of that mode. The simple equation
-<span class='eq'><i>E = h&nu;</i><span>[1]</span></span>
-introduced a fundamental constant of nature <i>h</i>, now called the Planck constant. Since the frequencies themselves were discrete, the energies were quantised. On this basis, he managed to derive his empirical formula, at the turn of the 20th century.<br>
-<br>
+<span class='equation'><i>E = h&nu;</i><span>[1]</span></span>
+introduced a fundamental constant of nature <i>h</i>, now called the Planck constant. Since the frequencies themselves were discrete, the energies were quantised. On this basis, he managed to derive his empirical formula, at the turn of the 20th century.
+<br><br>
 Planck's interpretation of the quantisation was that energy is exchanged between light and matter in packets called <i>quanta</i>. Albert Einstein radically proposed that light itself was quantised in the form of particles, subsequently named <i>photons</i>. Equation [1], known as the Planck-Einstein relation, specifies the energy of a photon. When merged with Einstein's theory of relativity, the photon necessarily has zero mass. Energy of a massless particle is given by <i>E = pc</i>, where <i>p</i> is the momentum of the particle and <i>c</i> is the speed of light. Combining the Planck-Einstein relation with the relativistic energy equation results in a photon momentum
-<span class='eq'><i>p = h / &lambda;</i><span>[2]</span></span>
-where <i>&lambda; = c / &nu;</i> is the wavelength of the wave. This was the first instance of wave-particle duality; <i>E</i> and <i>p</i> are properties of a particle, while <i>&nu;</i> and <i>&lambda;</i> are properties of a wave. As a convention, I will retain the term 'light' as reference to the wave nature.<br>
-<br>
-Opposition to the existence of photons was nullified via two experiments regarding photon-electron collisions. First was the photoelectric effect, in which incident light ejects electrons from a surface. Triggering the phenomena requires that the photon energy exceed the minimum value by which the electron is bound. As per the Planck-Einstein relation, this correlates to a threshold frequency of light, contrary to wave theory predictions of a threshold intensity. Second was the Compton effect, in which the wavelength of light increases as it deflects off an electron, mimicking a billiards-like collision. A momentum transfer from the photon to the electron factored into equation [2] derives this result.<br>
-<br>
+<span class='equation'><i>p = h / &lambda;</i><span>[2]</span></span>
+where <i>&lambda; = c / &nu;</i> is the wavelength of the wave. This was the first instance of wave-particle duality; <i>E</i> and <i>p</i> are properties of a particle, while <i>&nu;</i> and <i>&lambda;</i> are properties of a wave. As a convention, I will retain the term 'light' as reference to the wave nature.
+<br><br>
+Opposition to the existence of photons was nullified via two experiments regarding photon-electron collisions. First was the photoelectric effect, in which incident light ejects electrons from a surface. Triggering the phenomena requires that the photon energy exceed the minimum value by which the electron is bound. As per the Planck-Einstein relation, this correlates to a threshold frequency of light, contrary to wave theory predictions of a threshold intensity. Second was the Compton effect, in which the wavelength of light increases as it deflects off an electron, mimicking a billiards-like collision. A momentum transfer from the photon to the electron factored into equation [2] derives this result.
+<br><br>
 With an understanding of light-matter interactions, Niels Bohr targeted matter itself. Analogous to the solar system, his famous model of the atom consisted of negatively-charged electrons orbiting a nucleus of positively-charged protons. However, classical electromagnetism predicts that an electron in orbit will radiate its energy, causing it to spiral into the nucleus. To overcome this hurdle, he postulated the existence of orbits with certain energies in which the electron does not radiate, known as <i>stationary states</i> and denoted by a positive integer <i>n</i>. An electron transitions between two states separated by energy <i>&Delta;E</i>, through the absorption or radiation of a photon whose energy equals their difference.
-<span class ='eq'><i>h&nu; = &Delta;E</i><span>[3]</span></span>
+<span class ='equation'><i>h&nu; = &Delta;E</i><span>[3]</span></span>
 This generates a characteristic set of frequencies associated with the energy levels of a chemical element, called <i>atomic spectra</i>. Bohr further postulated that the angular momentum <i>L</i> of the electron is quantised in <i>h</i>,
-<span class='eq'><i>L = nh / 2&pi;</i><span>[4]</span></span>
+<span class='equation'><i>L = nh / 2&pi;</i><span>[4]</span></span>
 after remarkably observing the similarity in their units. Subsequent implementation of classical particle motion allowed him to extract the atomic spectra of Hydrogen and Helium. Excellent agreement with experimental data superseded a deeper enquiry into the postulated non-radiative nature of these states.
 <br><br>
 Every domain of physics has a mathematical framework. Werner Heisenberg felt compelled to draft the first formulation, which he called 'quantum mechanics', relying on <i>observables</i>. Constructed on the premise that the orbits cannot be observed, he concerned himself with only the energies and transition rates of an electron in an atom. A notable feature of his theory is the order of multiplication of variables. The <i>commutator</i> is defined for two variables <i>A</i> and <i>B</i> as
-<span class='eq'><i>[A, B] = AB - BA.</i><span>[5]</span></span>
+<span class='equation'><i>[A, B] = AB - BA.</i><span>[5]</span></span>
 Certain variables surprised Heisenberg with nonzero commutators, and were identified as matrices by his advisor, Max Born. Matrix mechanics, as it came to be known, was abstract and limited in its application. Erwin Schr&ouml;dinger's wave mechanics proved to be a more versatile alternative.
-<br><br>
-Next: <b><a href='#Wave-Particle%20Duality'>Wave-Particle Duality</a></b>
+<br><br><p>
+<ul class='bottom-nav'>
+<li></li>
+<li>Next: <b><a href='#Wave-Particle%20Duality'>Wave-Particle Duality</a></b></li>
+</ul>

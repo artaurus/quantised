@@ -1,1 +1,7 @@
-Coming soon.
+<h2>Interpretations</h2>
+<p>Coming soon.
+<br><br></p>
+<ul class='bottom-nav'>
+<li>Prev: <b><a href='#Entanglement'>Entanglement</a></b></li>
+<li>Next: <b><a href='#Measurement'>Measurement</a></b></li>
+</ul>
