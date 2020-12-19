@@ -1,54 +1,43 @@
-const homePage = () => location.href = 'https://artaurus.github.io/quantised/';
+const homePage = () => location.href = 'http://localhost:8000/';
 
 function renderState(route) {
-  const anchor = Array.from(document.querySelectorAll('nav ul li a'));
-  const state = anchor.filter(a => a.innerHTML == route)[0];
-  if (!state) {
-    return homePage();
+  window.scrollTo(0, 0);
+
+  const article = document.querySelector('article');
+  if (!article) {
+    const sections = document.querySelectorAll('section');
+    sections.forEach(section => section.style.display = 'none');
+    const nav = document.querySelector('nav');
+    nav.style.display = 'none';
+
+    const article = document.createElement('article');
+    document.querySelector('main').appendChild(article);
   }
 
   fetch('chapters/' + route + '.txt')
-    .then(response => response.text())
+    .then(response => {
+      if (response.status == 200) {
+        return response.text()
+      } else {
+        return homePage();
+      }
+    })
     .then(content => {
-      document.querySelector('h3').innerHTML = route;
-      document.querySelector('p').innerHTML = content;
+      document.querySelector('article').innerHTML = content;
+      document.title = 'Quantised - ' + route;
     })
     .catch(error => console.log(error));
-  document.title = 'Quantised - ' + route;
-
-  let old = document.querySelector('#active');
-  if (old) {
-    old.id = '';
-  }
-  state.id = 'active';
-  old = state;
-  window.scrollTo(0, 0);
 }
-
-if (window.innerWidth < 480) {
-  const main = document.querySelector('main');
-  const first = main.firstElementChild;
-  main.removeChild(first);
-  main.appendChild(first);
-}
-
-const routes = ['Introduction', 'Wave-Particle Duality', 'Transformation Theory', 'Uncertainty', 'Spin', 'Antiparticles', 'Entanglement', 'Interpretations', 'Measurement'];
-
-const ul = document.querySelector('ul');
-routes.forEach(route => {
-  const li = document.createElement('li');
-  const a = document.createElement('a');
-  a.href = '#' + route.replaceAll(' ', '%20');
-  const text = document.createTextNode(route);
-  a.appendChild(text);
-  li.appendChild(a);
-  ul.appendChild(li);
-});
 
 if (location.hash) {
   const route = location.hash.slice(1).replaceAll('%20', ' ');
   renderState(route);
 }
+
+window.addEventListener('hashchange', () => {
+  const route = location.hash.slice(1).replaceAll('%20', ' ');
+  return renderState(route);
+});
 
 window.addEventListener('popstate', () => {
   const route = location.hash.slice(1).replaceAll('%20', ' ');
@@ -58,5 +47,3 @@ window.addEventListener('popstate', () => {
     return homePage();
   }
 });
-
-window.addEventListener('orientationchange', () => location.reload());
