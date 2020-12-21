@@ -6,7 +6,7 @@ body {
 header {
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
   position: fixed;
   width: 100%;
   height: 20vh;
@@ -28,7 +28,7 @@ h1 a {
 
 main {
   position: relative;
-  top: 22vh;
+  top: 20vh;
   z-index: 1;
   line-height: 2.5rem;
   background-color: inherit;
@@ -43,44 +43,10 @@ article {
 
 nav {
   display: grid;
-  grid-gap: 40px;
-  margin: 2rem 0;
-}
-
-.nav-item {
-  width: 100%;
-  margin: 0 auto;
-}
-
-.nav-tile {
-  width: 20px;
-  height: 100%;
-}
-
-.nav-item:nth-child(odd) .nav-tile {
-  float: left;
-  margin-right: 10px;
-}
-
-.nav-item:nth-child(even) .nav-tile {
-  float: right;
-  margin-left: 10px;
-}
-
-.nav-item:nth-child(3n-2) .nav-tile {
-  background-color: #800080;
-}
-
-.nav-item:nth-child(3n-1) .nav-tile {
-  background-color: #222;
-}
-
-.nav-item:nth-child(3n) .nav-tile {
-  background-color: #008080;
-}
-
-.nav-item:nth-child(even) {
-  text-align: right;
+  grid-template-columns: 6% 80% 6%;
+  row-gap: 40px;
+  column-gap: 4%;
+  margin: 20px 0;
 }
 
 h2 {
@@ -116,12 +82,28 @@ i {
   justify-content: space-between;
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 768px) and (min-height: 1024px) {
+  header {
+    align-items: flex-end;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  section,
+  article {
+    padding: 20px 0;
+  }
+}
+
+@media screen and (min-width: 1120px) {
   body {
     font-size: 20px;
   }
 
   header {
+    align-items: flex-end;
     height: 40vh;
   }
 
@@ -140,23 +122,11 @@ i {
     padding: 40px 0;
   }
 
-  .nav-item {
-    width: 1120px;
-  }
-
-  .nav-tile {
-    width: 40px;
-    height: 100%;
-  }
-
-  .nav-item:nth-child(odd) .nav-tile {
-    float: left;
-    margin-right: 20px;
-  }
-
-  .nav-item:nth-child(even) .nav-tile {
-    float: right;
-    margin-left: 20px;
+  nav {
+    grid-template-columns: 40px 1000px 40px;
+    row-gap: 40px;
+    column-gap: 20px;
+    justify-content: center;
   }
 
   nav p {

@@ -32,6 +32,27 @@ function renderState(route) {
 if (location.hash) {
   const route = location.hash.slice(1).replaceAll('%20', ' ');
   renderState(route);
+} else {
+  const content = Array.from(document.querySelectorAll('.nav-content'));
+  content.forEach((para, i) => {
+    if (i % 2) {
+      para.style.textAlign = 'right';
+    }
+  });
+
+  const tiles = Array.from(document.querySelectorAll('.nav-tile'));
+  tiles.forEach((tile, i) => {
+    switch (i % 3) {
+      case 0:
+        tile.style.backgroundColor = '#800080';
+        break;
+      case 1:
+        tile.style.backgroundColor = '#222';
+        break;
+      case 2:
+        tile.style.backgroundColor = '#008080';
+    }
+  });
 }
 
 window.addEventListener('hashchange', () => {
