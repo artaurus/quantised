@@ -1,4 +1,4 @@
-const homePage = () => location.href = 'http://localhost:8000/';
+const homePage = () => location.href = 'https://artaurus.github.io/quantised/';
 
 function renderState(route) {
   window.scrollTo(0, 0);
