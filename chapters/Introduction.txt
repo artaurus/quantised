@@ -21,8 +21,7 @@ after remarkably observing the similarity in their units. Subsequent implementat
 <br><br>
 Every domain of physics has a mathematical framework. Werner Heisenberg felt compelled to draft the first formulation, which he called 'quantum mechanics', relying on <i>observables</i>. Constructed on the premise that the orbits cannot be observed, he concerned himself with only the energies and transition rates of an electron in an atom. A notable feature of his theory is the order of multiplication of variables. The <i>commutator</i> is defined for two variables <i>A</i> and <i>B</i> as
 <span class='equation'><i>[A, B] = AB - BA.</i><span>[5]</span></span>
-Certain variables surprised Heisenberg with nonzero commutators, and were identified as matrices by his advisor, Max Born. Matrix mechanics, as it came to be known, was abstract and limited in its application. Erwin Schr&ouml;dinger's wave mechanics proved to be a more versatile alternative.
-<br><br><p>
+Certain variables surprised Heisenberg with nonzero commutators, and were identified as matrices by his advisor, Max Born. Matrix mechanics, as it came to be known, was abstract and limited in its application. Erwin Schr&ouml;dinger's wave mechanics proved to be a more versatile alternative.<p>
 <ul class='bottom-nav'>
 <li></li>
 <li>Next: <b><a href='#Wave-Particle%20Duality'>Wave-Particle Duality</a></b></li>

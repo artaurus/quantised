@@ -1,6 +1,5 @@
 <h2>Wave-Particle Duality</h2>
-<p>Coming soon.
-<br><br></p>
+<p>Coming soon.</p>
 <ul class='bottom-nav'>
 <li>Prev: <b><a href='#Introduction'>Introduction</a></b></li>
 <li>Next: <b><a href='#Transformation Theory'>Transformation Theory</a></b></li>
