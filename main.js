@@ -1,31 +1,28 @@
 const homePage = () => location.href = 'https://artaurus.github.io/quantised/';
 
 function redesign(header) {
-  const displace = '20vh';
   header.style.alignItems = 'center';
-  header.style.height = displace;
   header.style.background = '#fff';
   header.style.zIndex = '2';
 
   if (window.innerWidth > 1120) {
+    header.style.height = '20vh';
     document.querySelector('h1').style.fontSize = '3.5rem';
+    document.querySelector('main').style.top = '20vh';
   }
-  document.querySelector('main').style.top = displace;
 }
 
 function colorTile(index) {
-  let color = '';
   switch (index % 3) {
     case 0:
-      color = '#800080';
+      return '#800080';
       break;
     case 1:
-      color = '#222';
+      return '#222';
       break;
     case 2:
-      color = '#008080';
+      return '#008080';
   }
-  return color;
 }
 
 function renderState(route) {
@@ -74,7 +71,6 @@ if (location.hash) {
       para.style.textAlign = 'right';
     }
   });
-
   const tiles = Array.from(document.querySelectorAll('.nav-tile'));
   tiles.forEach((tile, i) => tile.style.backgroundColor = colorTile(i));
 }
