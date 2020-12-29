@@ -1,5 +1,7 @@
 const homePage = () => location.href = 'https://artaurus.github.io/quantised/';
 
+const getRoute = () => location.hash.slice(1).replaceAll('%20', ' ');
+
 function redesign(header) {
   header.style.alignItems = 'center';
   header.style.background = '#fff';
@@ -16,10 +18,8 @@ function colorTile(index) {
   switch (index % 3) {
     case 0:
       return '#800080';
-      break;
     case 1:
       return '#222';
-      break;
     case 2:
       return '#008080';
   }
@@ -62,8 +62,7 @@ function renderState(route) {
 }
 
 if (location.hash) {
-  const route = location.hash.slice(1).replaceAll('%20', ' ');
-  renderState(route);
+  renderState(getRoute());
 } else {
   const content = Array.from(document.querySelectorAll('.nav-content'));
   content.forEach((para, i) => {
@@ -75,13 +74,10 @@ if (location.hash) {
   tiles.forEach((tile, i) => tile.style.backgroundColor = colorTile(i));
 }
 
-window.addEventListener('hashchange', () => {
-  const route = location.hash.slice(1).replaceAll('%20', ' ');
-  return renderState(route);
-});
+window.addEventListener('hashchange', () => renderState(getRoute()));
 
 window.addEventListener('popstate', () => {
-  const route = location.hash.slice(1).replaceAll('%20', ' ');
+  const route = getRoute();
   if (route) {
     return renderState(route);
   } else {
