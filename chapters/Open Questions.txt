@@ -1,6 +1,6 @@
 <h2>Open Questions</h2>
 <p>Coming soon.</p>
 <ul class='bottom-nav'>
-<li>Prev: <b><a href='#Interpretations'>Interpretations</a></b></li>
+<li>Prev: <b><a href='#Entanglement'>Entanglement</a></b></li>
 <li></li>
 </ul>
