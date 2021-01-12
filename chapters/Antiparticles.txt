@@ -1,6 +1,0 @@
-<h2>Antiparticles</h2>
-<p>Coming soon.</p>
-<ul class='bottom-nav'>
-<li>Prev: <b><a href='#Uncertainty'>Uncertainty</a></b></li>
-<li>Next: <b><a href='#Entanglement'>Entanglement</a></b></li>
-</ul>
