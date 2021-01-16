@@ -1,5 +1,5 @@
 body {
-  font-family: Quicksand, Verdana;
+  font-family: Quicksand, Georgia;
   font-size: 18px;
 }
 
@@ -12,7 +12,7 @@ header {
   width: 100%;
   height: 20vh;
   z-index: 0;
-  background: linear-gradient(#fff, #008080);
+  background: linear-gradient(#fff, #004040 150%);
 }
 
 h1 {

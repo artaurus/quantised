@@ -17,11 +17,11 @@ function redesign(header) {
 function colorTile(index) {
   switch (index % 3) {
     case 0:
-      return '#800080';
-    case 1:
       return '#222';
+    case 1:
+      return '#700070';
     case 2:
-      return '#008080';
+      return '#007070';
   }
 }
 
