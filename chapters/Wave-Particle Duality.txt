@@ -14,10 +14,10 @@ Subsequently, Erwin Schr&ouml;dinger introduced the <i>wavefunction</i>, denoted
 of the particle's position in coordinate space. An absurd yet interesting phenomenon explained by this probabilistic interpretation is quantum tunnelling, in which a particle passes through a barrier because the wavefunction still exists on the other side.
 <br><br>
 Bohr's atomic model was restructured using the wavefunction. For an electron in an atom, the wavefunction is split into a radial part and an angular part. The former is quantised into states labelled by <i>n</i>, similar to the stationary states. The latter is quantised into states called <i>spherical harmonics</i>, labelled by <i>l</i> and <i>m</i>, since two angular coordinates are required for a sphere. Certain conditions are imposed on these state labels
-<span class='equation'><i>n &gt; 0 &emsp; &rarr; &emsp; n = 1, 2, 3, ...</i><span></span></span>
-<span class='equation'><i>0 &le; l &lt; n &emsp; &rarr; &emsp; l = 0, 1, 2, ..., n - 1</i><span>[10]</span></span>
-<span class='equation'><i>|m| &le; l &emsp; &rarr; &emsp; m = - l, ..., - 1, 0, 1, ..., l</i><span></span></span>
-giving them the name <i>quantum numbers</i>; they parametrise the wavefunction. As before, the energy levels are determined by <i>n</i> alone, generating the same atomic spectra. Therefore, multiple (angular) states exist per energy level, termed <i>degeneracy</i>. Each wavefunction encloses a cloud-like <i>orbital</i>, illustrating where the electron can be found. Bohr's old-fashioned orbits were just the positions at which the radial wavefunction peaked, i.e. the most probable distances of the electron from the nucleus. It is rather unsatisfying that wave mechanics reduces the atom to a fuzzy mess.
+<span class='equation'><i>n = 1, 2, 3, ...</i><span></span></span>
+<span class='equation'><i>l = 0, 1, 2, ..., n - 1</i><span>[10]</span></span>
+<span class='equation'><i>m = - l, ..., - 1, 0, 1, ..., l</i><span></span></span>
+giving them the name <i>quantum numbers</i>; they parametrise the wavefunction as <i>&Psi;<sub>nlm</sub></i>. As before, the energy levels are determined by <i>n</i> alone, generating the same atomic spectra. Each wavefunction encloses a cloud-like <i>orbital</i>, illustrating where the electron can be found. Bohr's old-fashioned orbits were just the positions at which the radial wavefunction peaked, i.e. the most probable distances of the electron from the nucleus. It is rather unsatisfying that wave mechanics reduces the atom to a fuzzy mess.
 </p>
 <ul class='bottom-nav'>
 <li>Prev: <b><a href='#Introduction'>Introduction</a></b></li>
