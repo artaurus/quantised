@@ -10,8 +10,8 @@ Opposition to the existence of photons was nullified via two experiments regardi
 <br><br>
 Having deciphered light-matter interactions, Niels Bohr targeted matter itself. Analogous to the solar system, his famous model of the atom consisted of negatively-charged electrons orbiting a nucleus of positively-charged protons. However, classical electromagnetism predicts that an electron in orbit will radiate its energy, causing it to spiral into the nucleus. To overcome this hurdle, he postulated the existence of orbits with certain energies in which the electron does not radiate, termed <i>stationary states</i>, and labelled by a positive integer <i>n</i>. An electron transitions between two states separated by energy <i>&Delta;E</i>, through the absorption or radiation of a photon whose energy equals their difference.
 <span class='equation'><i>h&nu; = &Delta;E</i><span>[3]</span></span>
-This generates a characteristic set of frequencies associated with the energy levels of a chemical element, known as <i>atomic spectra</i>. Bohr further postulated that the angular momentum <i>L</i> of the electron is quantised in <i>h</i>,
-<span class='equation'><i>L = nh / 2&pi;</i><span>[4]</span></span>
+This generates a characteristic set of frequencies associated with the energy levels of a chemical element, known as <i>atomic spectra</i>. Bohr further postulated that the electron's angular momentum <i>l</i> is quantised in <i>h</i>,
+<span class='equation'><i>l = nh / 2&pi;</i><span>[4]</span></span>
 after remarkably observing the similarity in their units. Subsequent implementation of classical particle motion allowed him to extract the atomic spectra of hydrogen and helium. Excellent agreement with experimental data superseded a deeper enquiry into the postulated non-radiative nature of these states.
 <p>
 <ul class='bottom-nav'>
