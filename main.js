@@ -2,16 +2,33 @@ const homePage = () => location.href = 'https://artaurus.github.io/quantised/';
 
 const getRoute = () => location.hash.slice(1).replaceAll('%20', ' ');
 
-function redesign(header) {
-  header.style.alignItems = 'center';
-  header.style.background = '#fff';
-  header.style.zIndex = '2';
+function waves() {
+  const w = window.innerWidth;
+  const h = window.innerHeight;
+  const canvas = document.getElementById('canvas');
+  canvas.width = w;
+  canvas.height = 0.16*h;
+  const mid = 0.08*h;
+  const ctx = canvas.getContext('2d');
 
-  if (window.innerWidth > 1120) {
-    header.style.height = '20vh';
-    document.querySelector('h1').style.fontSize = '3.5rem';
-    document.querySelector('main').style.top = '20vh';
-  }
+  let phase = 0;
+  setInterval(() => {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    let y1 = [], y2 = [];
+    for(x = 0; x < w; x++) {
+      y1[x] = 0.05 * h * Math.sin(0.01 * (x - 2*phase));
+      y2[x] = 0.05 * h * Math.cos(0.01 * (x + phase));
+    }
+    ctx.beginPath();
+    for(x = 0; x < w; x++) {
+      ctx.moveTo(x, mid + y1[x]);
+      ctx.lineTo(x+1, mid + y1[x+1]);
+      ctx.moveTo(x, mid + y2[x]);
+      ctx.lineTo(x+1, mid + y2[x+1]);
+    }
+    ctx.stroke();
+    phase += 2;
+  }, 10);
 }
 
 function colorTile(index) {
@@ -32,13 +49,11 @@ function renderState(route) {
   if (!document.querySelector('article')) {
     const sections = document.querySelectorAll('section');
     sections.forEach(section => section.style.display = 'none');
-    const nav = document.querySelector('nav');
-    nav.style.display = 'none';
+    document.querySelector('nav').style.display = 'none';
+    document.querySelector('canvas').style.display = 'none';
 
     const article = document.createElement('article');
     document.querySelector('main').appendChild(article);
-
-    redesign(header);
   }
 
   fetch('chapters/' + route + '.txt')
@@ -55,10 +70,16 @@ function renderState(route) {
     })
     .catch(error => console.log(error));
 
-    const anchors = Array.from(document.querySelectorAll('h2 a'));
-    const routes = anchors.map(anchor => anchor.innerText);
-    const i = routes.findIndex(item => item == route.toUpperCase());
-    header.style.borderBottom = colorTile(i) + ' solid 4vh';
+  const anchors = Array.from(document.querySelectorAll('h2 a'));
+  const routes = anchors.map(anchor => anchor.innerText);
+  const i = routes.findIndex(item => item == route.toUpperCase());
+  header.style.borderBottom = colorTile(i) + ' solid 4vh';
+  header.style.position = 'fixed';
+  header.style.zIndex = 1;
+
+  const main = document.querySelector('main');
+  main.style.position = 'relative';
+  main.style.top = '20vh';
 }
 
 if (location.hash) {
@@ -72,6 +93,8 @@ if (location.hash) {
   });
   const tiles = Array.from(document.querySelectorAll('.nav-tile'));
   tiles.forEach((tile, i) => tile.style.backgroundColor = colorTile(i));
+
+  waves();
 }
 
 window.addEventListener('hashchange', () => renderState(getRoute()));
