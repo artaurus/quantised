@@ -26,6 +26,7 @@ function waves() {
       ctx.moveTo(x, mid + y2[x]);
       ctx.lineTo(x+1, mid + y2[x+1]);
     }
+    ctx.strokeStyle = '#777';
     ctx.stroke();
     phase += 2;
   }, 10);
