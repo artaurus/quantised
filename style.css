@@ -3,16 +3,19 @@ body {
   font-size: 18px;
 }
 
+canvas {
+  position: absolute;
+}
+
 header {
   box-sizing: border-box;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: fixed;
   width: 100%;
   height: 20vh;
-  z-index: 0;
-  background: linear-gradient(#fff, #004040 150%);
+  background-color: #fff;
+  border-bottom: #007070 solid 4vh;
 }
 
 h1 {
@@ -28,9 +31,6 @@ h1 a {
 }
 
 main {
-  position: relative;
-  top: 20vh;
-  z-index: 1;
   line-height: 2.5rem;
   background-color: inherit;
 }
@@ -76,6 +76,11 @@ i {
   margin: 0 auto;
 }
 
+iframe {
+  width: 100%;
+  border: 1px solid #ccc;
+}
+
 .bottom-nav {
   list-style-type: none;
   display: flex;
@@ -84,46 +89,17 @@ i {
   margin-top: 40px;
 }
 
-@media screen and (min-width: 768px) and (min-height: 1024px) {
-  header {
-    align-items: flex-end;
+@media screen and (min-width: 768px) {
+  body {
+    font-size: 20px;
   }
 
   h1 {
     font-size: 3.5rem;
   }
-}
-
-@media screen and (min-width: 1120px) {
-  body {
-    font-size: 20px;
-  }
-
-  header {
-    align-items: flex-end;
-    height: 40vh;
-  }
-
-  h1 {
-    font-size: 4.5rem;
-  }
 
   main {
-    top: 40vh;
     line-height: 3rem;
-  }
-
-  section,
-  article {
-    width: 1000px;
-    padding: 30px 0;
-  }
-
-  nav {
-    grid-template-columns: 40px 1000px 40px;
-    row-gap: 40px;
-    column-gap: 20px;
-    justify-content: center;
   }
 
   nav p {
@@ -136,5 +112,20 @@ i {
 
   .bottom-nav {
     flex-direction: row;
+  }
+
+  @media screen and (min-width: 1120px) and (max-height: 1080px) {
+    section,
+    article {
+      width: 1000px;
+      padding: 30px 0;
+    }
+
+    nav {
+      grid-template-columns: 40px 1000px 40px;
+      row-gap: 40px;
+      column-gap: 20px;
+      justify-content: center;
+    }
   }
 }
