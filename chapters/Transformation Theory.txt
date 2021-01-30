@@ -1,14 +1,22 @@
 <h2>Transformation Theory</h2>
 <p>
 Waves possess a property called <i>superposition</i>, which is similar to addition. If <i>&Psi;<sub>1</sub></i> and <i>&Psi;<sub>2</sub></i> are wavefunctions that satisfy the Schr&ouml;dinger equation, then so does <i>&alpha;&Psi;<sub>1</sub> + &beta;&Psi;<sub>2</sub></i>, where <i title='alpha'>&alpha;</i> and <i title='beta'>&beta;</i> are scalars (real or complex numbers). Paul Dirac observed the resemblance between wave superposition and <i>vector</i> algebra.
-<br><br>
+<br>
+<iframe src="https://www.desmos.com/calculator/mmhb1gigrq?embed" height="400px" frameborder=0></iframe>
+<span class='caption'>Figure [4]: Wave superposition.</span>
+<br>
 Vectors are elements of a vector space, and have as many components as the dimensions of that space. For example, a vector <i>|v&gt;</i> in an <i>f</i>-dimensional space will have <i>f</i> components.
 <span class='equation'><i>|v&gt; = (v<sub>1</sub>, v<sub>2</sub>, v<sub>3</sub>, ..., v<sub>f</sub>)</i><span>[11]</span></span>
 Addition of two vectors <i>|v&gt;</i> and <i>|w&gt;</i>
 <span class='equation'><i>|v&gt; + |w&gt; = (v<sub>1</sub> + w<sub>1</sub>, v<sub>2</sub> + w<sub>2</sub>, ..., v<sub>f</sub> + w<sub>f</sub>)</i><span>[12]</span></span>
 and multiplication of a vector <i>|v&gt;</i> with a scalar <i>a</i>
 <span class='equation'><i>a|v&gt; = (av<sub>1</sub>, av<sub>2</sub>, ..., av<sub>f</sub>)</i><span>[13]</span></span>
-generate vectors that exist within the same space as the original vectors. It can be extrapolated such that, if <i>|v&gt;</i> and <i>|w&gt;</i> are vectors of a space, then <i>a|v&gt; + b|w&gt;</i> is a vector belonging to the same space, where <i>a</i> and <i>b</i> are scalars. Hence, Dirac represented the wavefunction as components of a vector <i>|&Psi;&gt;</i>, called the <i>state vector</i>. Since a wave consists of an infinite number of points, the state vector must correspondingly have an infinite number of components, thus residing in an abstract infinite-dimensional vector space called the <i>Hilbert space</i>.
+generate vectors that exist within the same space as the original vectors. It can be extrapolated such that, if <i>|v&gt;</i> and <i>|w&gt;</i> are vectors of a space, then <i>a|v&gt; + b|w&gt;</i> is a vector belonging to the same space, where <i>a</i> and <i>b</i> are scalars.
+<br>
+<iframe src="https://www.desmos.com/calculator/bafrkhrwjz?embed" height="500px" frameborder=0></iframe>
+<span class='caption'>Figure [5]: Vector algebra in two dimensions.</span>
+<br>
+Hence, Dirac represented the wavefunction as components of a vector <i>|&Psi;&gt;</i>, called the <i>state vector</i>. Since a wave consists of an infinite number of points, the state vector must correspondingly have an infinite number of components, thus residing in an abstract infinite-dimensional vector space called the <i>Hilbert space</i>.
 <br><br>
 <i>Operators</i> transform vectors. A vector's components form a one-dimensional array of numbers; an operator's components occupy a two-dimensional array. An operator <i>O</i> in an <i>f</i>-dimensional space has <i>f <sup>2</sup></i> components.
 <span class='equation'><i>O = (O<sub>11</sub>, O<sub>12</sub>, ..., O<sub>1f</sub>,<br>
@@ -19,7 +27,7 @@ Werner Heisenberg formulated an alternate mathematical framework in which vector
 <span class='equation'><i>O |v&gt; = |w&gt;</i><span>[15]</span></span>
 Of special interest is the eigenvalue equation, in which an operator simply scales a vector.
 <span class='equation'><i>O |v&gt; = &phi; |v&gt;</i><span>[16]</span></span>
-<i>&phi;</i> is a scalar called the <i>eigenvalue</i> and <i>|v&gt;</i> is called the <i>eigenvector</i> (or <i>eigenstate</i>) of operator <i>O</i>. There are as many eigenvalues and eigenvectors of an operator as there are dimensions in the vector space. Dynamical variables such as position <i>q</i> and momentum <i>p</i> are represented by operators. If the state vector is an eigenstate of the position operator <i>Q</i>, its corresponding eigenvalue is the position of the particle. Similarly, if the state vector is an eigenstate of the momentum operator <i>P</i>, its corresponding eigenvalue is the momentum of the particle. In the case that the state vector is not an eigenstate, the dynamical variables are calculated as weighted averages, or <i>expectation values</i>, over the probability distribution <i>|&Psi;|<sup>2</sup></i>.
+<i>&phi;</i> is a scalar called the <i>eigenvalue</i> and <i>|v&gt;</i> is called the <i>eigenvector</i> (or <i>eigenstate</i>) of operator <i>O</i>. There are as many eigenvalues and eigenvectors of an operator as there are dimensions in the vector space. Dynamical variables such as position <i>q</i> and momentum <i>p</i> are represented by operators called <i>observables</i>. If the state vector is an eigenstate of the position operator <i>Q</i>, its corresponding eigenvalue is the position of the particle. Similarly, if the state vector is an eigenstate of the momentum operator <i>P</i>, its corresponding eigenvalue is the momentum of the particle. In the case that the state vector is not an eigenstate, the dynamical variables are calculated as weighted averages, or <i>expectation values</i>, over the probability distribution <i>|&Psi;|<sup>2</sup></i>.
 <br><br>
 Perhaps the most important operator is the <i>Hamiltonian</i>. It is a description of the system's energies: kinetic <i>T</i> plus potential <i>V</i>, associated with momentum <i>P</i> and position <i>Q</i> respectively. Schr&ouml;dinger's equation may now be introduced in the form of an eigenvalue equation.
 <span class='equation'><i>H |&Psi;&gt; = E |&Psi;&gt;</i><span>[17]</span></span>
