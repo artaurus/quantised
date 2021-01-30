@@ -48,10 +48,10 @@ function renderState(route) {
 
   const header = document.querySelector('header');
   if (!document.querySelector('article')) {
+    document.querySelector('canvas').style.display = 'none';
     const sections = document.querySelectorAll('section');
     sections.forEach(section => section.style.display = 'none');
     document.querySelector('nav').style.display = 'none';
-    document.querySelector('canvas').style.display = 'none';
 
     const article = document.createElement('article');
     document.querySelector('main').appendChild(article);
