@@ -1,5 +1,46 @@
 <h2>Uncertainty</h2>
-<p>Coming soon.</p>
+<p>
+Wave-particle duality introduces an unwanted indeterminacy. It is not possible to know with precision, and at the same time, both the position and momentum of a particle. Heisenberg's principle of minimum uncertainty is summarised as
+<span class='equation'><i>&sigma;<sub>Q</sub> &sigma;<sub>P</sub> &asymp; &hbar; / 2</i><span>[20]</span></span>
+where <I>&sigma;<sub>Q</sub></i> and <i>&sigma;<sub>P</sub></i> are the uncertainties in position and momentum respectively, and <i>&hbar; = h / 2&pi;</i>. If one uncertainty were to decrease, the other would increase, so as to maintain a constant product.
+<br><br>
+From equation [2], uncertainty in momentum depends on uncertainty in wavelength. Imagine the wavefunction as a sine wave; it has a well-defined wavelength, and consequently, a precise momentum. There is, however, a large uncertainty in the position of the particle, as per Born's probabilistic interpretation.
+<br>
+<iframe src="https://www.desmos.com/calculator/4or9s5tpnu?embed" height="200px" frameborder=0></iframe>
+<span class='caption'>Figure [6]: Precise wavelength, uncertain position.</span>
+<br>
+Contrariwise, consider a localised wavefunction. A reasonable certainty in position compensates an unknown wavelength, i.e. an undefined momentum.
+<br>
+<iframe src="https://www.desmos.com/calculator/v40xcf8dcm?embed" height="200px" frameborder=0></iframe>
+<span class='caption'>Figure [7]: Precise position, uncertain wavelength.</span>
+<br>
+The best compromise on position and momentum of a particle is the wavepacket (figure [2a]). A similar relation exists between the uncertainties in energy and time.
+<span class='equation'><i>&sigma;<sub>E</sub> &sigma;<sub>t</sub> &asymp; &hbar; / 2</i><span>[21]</span></span>
+Since these variables are not visual, it is best understood by an example. Positively-charged protons are crammed into a very tiny nucleus, which is 100000 times smaller than the atom itself. To overcome the strong repulsion exerted by similar charges, there must exist an even stronger force maintaining them within the nuclear dimensions. Ingeniously-named, this 'strong' force is one of the four fundamental forces (the others being electromagnetic, weak, and gravitational), and is mediated by particles called <i>mesons</i>. A nucleon (proton or neutron) emits a meson which is absorbed by another nucleon. Unlike photons, mesons do have mass. According to Einstein's famous equation, <i>E = mc<sup>2</sup></i>, uncertainty in energy equates to an uncertainty in mass. Absorption or emission of a meson will generate an uncertainty in the mass of the nucleon. As such, equation [21] specifies a time frame within which this uncertainty is allowed. However, the time frame is practically too short, and so the uncertainty in mass has never been measured.
+<br><br>
+Generalising the uncertainty principle depends on the <i>commutation</i> relations of the variables. For arbitrary variables <i>A</i> and <i>B</i>, the commutator is defined as
+<span class='equation'><i>[A, B] = AB - BA</i><span>[22]</span></span>
+and the variables are said to commute if it equals zero. Basically, a non-zero commutator signifies the relevance of the order of multiplication. Minimum uncertainty between these variables is given by
+<span class='equation'><i>&sigma;<sub>A</sub> &sigma;<sub>B</sub> &asymp; [A, B] / 2i</i><span>[23]</span></span>
+where <i>i = &radic;-1</i> is the imaginary unit of complex numbers. There exists no uncertainty between commuting variables. Since the dynamical variables are now represented by matrix operators instead of scalars, they generally do not commute. For example, the commutator of position and momentum is
+<span class='equation'><i>[Q, P] = i&hbar;</i><span>[24]</span></span>
+as derived from equations [20] and [23].
+<br><br>
+Assume that the state vector is an eigenstate of both observables <i>Q</i> and <i>P</i>, that is, their eigenvalue equations may be solved simultaneously to know the position <i>p</i> and momentum <i>q</i>.
+<span class='equation'><i>[Q, P] |&Psi;&gt; = Q (P |&Psi;&gt;) - P (Q |&Psi;&gt;)<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;= Q (p |&Psi;&gt;) - P (q |&Psi;&gt;)<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;= p (Q |&Psi;&gt;) - q (P |&Psi;&gt;)<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;= pq |&Psi;&gt; - qp |&Psi;&gt;<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;= (pq - qp) |&Psi;&gt;<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;= 0 |&Psi;&gt;</i><span></span></span>
+In the above derivation, the observables in the commutator are sequentially solved for their eigenvalues. Since all eigenvalues are scalar, they always commute (i.e. <i>pq = qp</i>), and so the commutator of the observables <i>Q</i> and <i>P</i> is also zero. This result contradicts equation [24]. Hence the initial assumption is wrong.
+<br><br>
+It is also confirmed from the above derivation that a set of dynamical variables may be known with precision only if their corresponding observables commute. Therefore, a quantum state is defined such that the state vector is simultaneously an eigenstate of all commuting observables. For an electron in an atom, the commuting observables are the Hamiltonian <i>H</i>, the square of the angular momentum observable <i>L<sup>2</sup></i>, and the angular momentum's <i>z</i>-component <i>L<sub>z</sub></i>,
+<span class='equation'><i>H |nlm&gt; = E<sub>n</sub> |nlm&gt;</i><span>[25]</span></span>
+<span class='equation'><i>L<sup>2</sup> |nlm&gt; = l(l + 1) &hbar;<sup>2</sup> |nlm&gt;</i><span>[26]</span></span>
+<span class='equation'><i>L<sub>z</sub> |nlm&gt; = m&hbar; |nlm&gt;</i><span>[27]</span></span>
+as their eigenvalues generate the three quantum numbers that parametrise the wavefunction; <i>n</i> determines the energy, <i>l</i> computes the magnitude of angular momentum, and <i>m</i> indicates the direction of angular momentum relative to the <i>z</i> axis.
+</p>
 <ul class='bottom-nav'>
 <li>Prev: <b><a href='#Transformation Theory'>Transformation Theory</a></b></li>
 <li>Next: <b><a href='#Entanglement'>Entanglement</a></b></li>
