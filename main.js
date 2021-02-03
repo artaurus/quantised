@@ -5,7 +5,7 @@ const getRoute = () => location.hash.slice(1).replaceAll('%20', ' ');
 function waves() {
   const w = window.innerWidth;
   const h = window.innerHeight;
-  const canvas = document.getElementById('canvas');
+  const canvas = document.querySelector('canvas');
   canvas.width = w;
   canvas.height = 0.16*h;
   const mid = 0.08*h;
@@ -60,7 +60,7 @@ function renderState(route) {
   fetch('chapters/' + route + '.txt')
     .then(response => {
       if (response.status == 200) {
-        return response.text()
+        return response.text();
       } else {
         return homePage();
       }
