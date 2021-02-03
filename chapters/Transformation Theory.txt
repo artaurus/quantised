@@ -2,7 +2,7 @@
 <p>
 Waves possess a property called <i>superposition</i>, which is similar to addition. If <i>&Psi;<sub>1</sub></i> and <i>&Psi;<sub>2</sub></i> are wavefunctions that satisfy the Schr&ouml;dinger equation, then so does <i>&alpha;&Psi;<sub>1</sub> + &beta;&Psi;<sub>2</sub></i>, where <i title='alpha'>&alpha;</i> and <i title='beta'>&beta;</i> are scalars (real or complex numbers). Paul Dirac observed the resemblance between wave superposition and <i>vector</i> algebra.
 <br>
-<iframe src="https://www.desmos.com/calculator/mmhb1gigrq?embed" height="400px" frameborder=0></iframe>
+<iframe src='https://www.desmos.com/calculator/46sgrnn7hf?embed' height='400px' frameborder=0></iframe>
 <span class='caption'>Figure [4]: Wave superposition.</span>
 <br>
 Vectors are elements of a vector space, and have as many components as the dimensions of that space. For example, a vector <i>|v&gt;</i> in an <i>f</i>-dimensional space will have <i>f</i> components.
@@ -13,7 +13,7 @@ and multiplication of a vector <i>|v&gt;</i> with a scalar <i>a</i>
 <span class='equation'><i>a|v&gt; = (av<sub>1</sub>, av<sub>2</sub>, ..., av<sub>f</sub>)</i><span>[13]</span></span>
 generate vectors that exist within the same space as the original vectors. It can be extrapolated such that, if <i>|v&gt;</i> and <i>|w&gt;</i> are vectors of a space, then <i>a|v&gt; + b|w&gt;</i> is a vector belonging to the same space, where <i>a</i> and <i>b</i> are scalars.
 <br>
-<iframe src="https://www.desmos.com/calculator/bafrkhrwjz?embed" height="500px" frameborder=0></iframe>
+<iframe src='https://www.desmos.com/calculator/bafrkhrwjz?embed' height='500px' frameborder=0></iframe>
 <span class='caption'>Figure [5]: Vector algebra in two dimensions.</span>
 <br>
 Hence, Dirac represented the wavefunction as components of a vector <i>|&Psi;&gt;</i>, called the <i>state vector</i>. Since a wave consists of an infinite number of points, the state vector must correspondingly have an infinite number of components, thus residing in an abstract infinite-dimensional vector space called the <i>Hilbert space</i>.

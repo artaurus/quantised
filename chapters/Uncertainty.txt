@@ -6,12 +6,12 @@ where <I>&sigma;<sub>Q</sub></i> and <i>&sigma;<sub>P</sub></i> are the uncertai
 <br><br>
 From equation [2], uncertainty in momentum depends on uncertainty in wavelength. Imagine the wavefunction as a sine wave; it has a well-defined wavelength, and consequently, a precise momentum. There is, however, a large uncertainty in the position of the particle, as per Born's probabilistic interpretation.
 <br>
-<iframe src="https://www.desmos.com/calculator/4or9s5tpnu?embed" height="200px" frameborder=0></iframe>
+<iframe src='https://www.desmos.com/calculator/4or9s5tpnu?embed' height='200px' frameborder=0></iframe>
 <span class='caption'>Figure [6]: Precise wavelength, uncertain position.</span>
 <br>
 Contrariwise, consider a localised wavefunction. A reasonable certainty in position compensates an unknown wavelength, i.e. an undefined momentum.
 <br>
-<iframe src="https://www.desmos.com/calculator/v40xcf8dcm?embed" height="200px" frameborder=0></iframe>
+<iframe src='https://www.desmos.com/calculator/v40xcf8dcm?embed' height='200px' frameborder=0></iframe>
 <span class='caption'>Figure [7]: Precise position, uncertain wavelength.</span>
 <br>
 The best compromise on position and momentum of a particle is the wavepacket (figure [2a]). A similar relation exists between the uncertainties in energy and time.
