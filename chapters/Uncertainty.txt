@@ -26,7 +26,7 @@ where <i>i = &radic;-1</i> is the imaginary unit of complex numbers. There exist
 <span class='equation'><i>[Q, P] = i&hbar;</i><span>[24]</span></span>
 as derived from equations [20] and [23].
 <br><br>
-Assume that the state vector is an eigenstate of both observables <i>Q</i> and <i>P</i>, that is, their eigenvalue equations may be solved simultaneously to know the position <i>p</i> and momentum <i>q</i>.
+Assume that the state vector is an eigenstate of both observables <i>Q</i> and <i>P</i>, that is, their eigenvalue equations may be solved simultaneously to know the position <i>q</i> and momentum <i>p</i>.
 <span class='equation'><i>[Q, P] |&Psi;&gt; = Q (P |&Psi;&gt;) - P (Q |&Psi;&gt;)<br>
 &emsp;&emsp;&emsp;&emsp;&emsp;= Q (p |&Psi;&gt;) - P (q |&Psi;&gt;)<br>
 &emsp;&emsp;&emsp;&emsp;&emsp;= p (Q |&Psi;&gt;) - q (P |&Psi;&gt;)<br>
