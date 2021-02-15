@@ -4,7 +4,7 @@ While others were still grasping the concept of wave-particle duality in light, 
 <span class='equation'><i>2&pi;r = n&lambda;</i><span>[5]</span></span>
 where <i>r</i> is the orbit radius.
 <br>
-<iframe src='https://www.desmos.com/calculator/nqnf2vpvah?embed' height='500px' frameborder=0></iframe>
+<iframe src='https://www.desmos.com/calculator/nqnf2vpvah?embed' id='figure1'></iframe>
 <span class='caption'>Figure [1]: Matter wave for <i>n = 3.</i></span>
 <br>
 Without affecting the equality between wave and particle velocities, de Broglie postulated that equations [1] and [2] hold for matter as well. Substituting equation [2] in equation [5] results in equation [4],
@@ -15,15 +15,15 @@ Subsequently, Erwin Schr&ouml;dinger introduced the <i>wavefunction</i>, denoted
 <span class='equation'><i>P<sub>dist</sub> = |&Psi;|<sup>2</sup></i><span>[9]</span></span>
 of the particle's position in coordinate space, i.e. the wavefunction determines where the particle can be found.
 <br>
-<iframe src='https://www.desmos.com/calculator/oxben1hems?embed' height='300px' frameborder=0></iframe>
+<iframe src='https://www.desmos.com/calculator/oxben1hems?embed' id='figure2a'></iframe>
 <span class='caption'>Figure [2a]: A localised wavefunction, called a <i>wavepacket</i>.</span>
-<iframe src='https://www.desmos.com/calculator/skis8mreuf?embed' height='300px' frameborder=0></iframe>
+<iframe src='https://www.desmos.com/calculator/skis8mreuf?embed' id='figure2b'></iframe>
 <span class='caption'>Figure [2b]: Probability distribution of the wavepacket.<br>
 (The oscillatory behaviour is complex and disappears when squared.)</span>
 <br>
 An absurd yet interesting phenomenon explained by this probabilistic interpretation is quantum tunnelling; a particle may pass through a barrier because the wavefunction exists on the other side, albeit with a reduced amplitude. Within the barrier, the wavefunction decays exponentially, but depending on the barrier's dimensions, it can escape to the other side before reaching zero.
 <br>
-<iframe src='https://www.desmos.com/calculator/pblzexdutp?embed' height='500px' frameborder=0></iframe>
+<iframe src='https://www.desmos.com/calculator/pblzexdutp?embed' id='figure3'></iframe>
 <span class='caption'>Figure [3]: Quantum tunnelling.</span>
 <br>
 Bohr's atomic model was restructured using the wavefunction. For an electron in an atom, the wavefunction is split into a radial part and an angular part. The former is quantised into states labelled by <i>n</i>, similar to the stationary states. The latter is quantised into states called <i>spherical harmonics</i>, labelled by <i>l</i> and <i>m</i>, since two angular coordinates are required for a sphere. Certain conditions are imposed on these state labels
