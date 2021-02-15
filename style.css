@@ -77,19 +77,6 @@ i {
   margin: 0 auto;
 }
 
-iframe {
-  width: 100%;
-  border: 1px solid #ccc;
-  margin-top: 20px;
-}
-
-.caption {
-  width: 100%;
-  display: inline-block;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
 .bottom-nav {
   list-style-type: none;
   display: flex;
