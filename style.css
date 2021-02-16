@@ -8,7 +8,6 @@ canvas {
 }
 
 header {
-  box-sizing: border-box;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -34,6 +33,7 @@ h1 a {
 main {
   line-height: 2.5rem;
   background-color: inherit;
+  width: 100%;
 }
 
 section,
@@ -61,6 +61,28 @@ h2 a {
 
 nav p {
   display: none;
+}
+
+#menu-button {
+  height: 40px;
+  margin: 20px;
+  float: right;
+  z-index: 1;
+}
+
+#menu {
+  list-style-type: none;
+  position: absolute;
+  top: 80px;
+  width: 100%;
+  background-color: #fff;
+  z-index: 0;
+}
+
+#menu a {
+  display: block;
+  padding: 10px 20px;
+  border: #ccc solid 1px;
 }
 
 i {
@@ -112,11 +134,29 @@ i {
     display: none;
   }
 
+  #menu-button {
+    margin: 25px 80px 0 0;
+    height: 40px;
+  }
+
+  #menu {
+    right: 0;
+    margin-right: 70px;
+    width: 40%;
+    text-align: right;
+    border: #888 solid 2px;
+  }
+
   .bottom-nav {
     flex-direction: row;
   }
 
   @media screen and (min-width: 1120px) {
+    main {
+      width: 1120px;
+      margin: 0 auto;
+    }
+
     section,
     article {
       width: 1000px;
@@ -126,6 +166,24 @@ i {
     nav {
       grid-template-columns: 40px 1000px 40px;
       column-gap: 20px;
+    }
+
+    #menu-button {
+      margin: 30px 60px 0 0;
+    }
+
+    #menu-button:hover {
+      cursor: pointer;
+    }
+
+    #menu {
+      margin-right: 40px;
+      width: 30%;
+    }
+
+    #menu a:hover {
+      background-color: #eee;
+      transition: 400ms;
     }
   }
 }
