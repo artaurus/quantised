@@ -90,6 +90,7 @@ function renderState(route) {
       li.append(a);
       menu.append(li);
     });
+    menu.style.display = 'none';
     main.appendChild(menu);
 
     // add article
@@ -129,7 +130,7 @@ function renderState(route) {
       // toggle menu
       const arrow = document.getElementById('menu-button');
       const menu = document.getElementById('menu');
-      let toggle = toggleMenu(arrow, menu, 1);
+      let toggle = 0;
       arrow.addEventListener('click', () => {
         toggle = toggleMenu(arrow, menu, toggle);
         if (window.innerWidth < 768) {
