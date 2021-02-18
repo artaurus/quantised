@@ -90,12 +90,10 @@ function renderState(route) {
       li.append(a);
       menu.append(li);
     });
-    menu.style.display = 'none';
     main.appendChild(menu);
 
     // add article
-    const article = document.createElement('article');
-    main.appendChild(article);
+    main.appendChild(document.createElement('article'));
   }
 
   // fetch chapter content
@@ -108,6 +106,30 @@ function renderState(route) {
       }
     })
     .then(html => {
+      // parse text as html
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(html, 'text/html');
+      const article = document.querySelector('article');
+
+      // toggle menu
+      const arrow = document.getElementById('menu-button');
+      const menu = document.getElementById('menu');
+      let toggle = toggleMenu(arrow, menu, 1);
+      arrow.addEventListener('click', () => {
+        toggle = toggleMenu(arrow, menu, toggle);
+        if (window.innerWidth < 768) {
+          if (toggle) {
+            article.innerHTML = '<h2>Chapters</h2>';
+          } else {
+            article.innerHTML = doc.body.innerHTML;
+          }
+        }
+      });
+
+      // fill article
+      article.innerHTML = doc.body.innerHTML;
+      document.title = 'Quantised - ' + route;
+
       // modify header
       const i = routes.findIndex(item => item == route);
       const header = document.querySelector('header');
@@ -119,28 +141,6 @@ function renderState(route) {
       const main = document.querySelector('main');
       main.style.position = 'relative';
       main.style.top = '20vh';
-
-      // fill article
-      const parser = new DOMParser();
-      const doc = parser.parseFromString(html, 'text/html');
-      const article = document.querySelector('article');
-      article.innerHTML = doc.body.innerHTML;
-      document.title = 'Quantised - ' + route;
-
-      // toggle menu
-      const arrow = document.getElementById('menu-button');
-      const menu = document.getElementById('menu');
-      let toggle = 0;
-      arrow.addEventListener('click', () => {
-        toggle = toggleMenu(arrow, menu, toggle);
-        if (window.innerWidth < 768) {
-          if (toggle) {
-            article.innerHTML = '<h2>Chapters</h2>';
-          } else {
-            article.innerHTML = doc.body.innerHTML;
-          }
-        }
-      });
     })
     .catch(error => console.log(error));
 }
