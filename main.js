@@ -90,6 +90,7 @@ function renderState(route) {
       li.append(a);
       menu.append(li);
     });
+    menu.style.display = 'none';
     main.appendChild(menu);
 
     // add article
